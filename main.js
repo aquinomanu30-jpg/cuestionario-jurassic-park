@@ -38,6 +38,7 @@ if (textoPuntaje) {
   });
 
   document.getElementById("btnVolver").addEventListener("click", () => {
-    window.location.href = "bienvenida.html";
+    window.location.href = "index.html";
   });
 }
+
