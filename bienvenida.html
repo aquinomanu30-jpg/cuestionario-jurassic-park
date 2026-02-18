@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Bienvenida</title>
+  <link rel="shortcut icon" href="img/jpk.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="contenedor">
+    <h1>Cuestionario de Jurassic Park</h1>
+    <p>Demuestra tus conocimientos sobre la pelicula de Jurassic Park</p>
+
+    <div class="formulario">
+      <label for="inputNombre">Ingresa tu nombre:</label>
+      <input type="text" id="inputNombre">
+      <button id="btnIniciar" class="boton">Iniciar</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("btnIniciar").addEventListener("click", () => {
+
+      let nombre = document.getElementById("inputNombre").value.trim();
+
+      if (nombre === "") {
+        alert("Por favor ingresa tu nombre");
+        return;
+      }
+
+      localStorage.setItem("jugadorActual", nombre);
+      window.location.href = "cuestionario.html";
+
+    });
+  </script>
+
+</body>
+</html>
+
